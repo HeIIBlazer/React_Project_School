@@ -1,4 +1,4 @@
-import db from '../config/database';
+import db from '../config/database.js';
 import { DataTypes, Model } from 'sequelize';
 import Department from './department.js';
 

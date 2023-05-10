@@ -1,15 +1,15 @@
 import Department from '../models/department.js';
 
-export const getAllDepartments = async (reg, res) => {
+export const getAllDepartments = async (req, res) => {
     try {
         const departments = await Department.findAll();
-        res.json({ message: error.message });
+        res.json(departments);
     } catch (error) {
         res.json({ message: error.message });
     }
 };
 
-export const getDepartmentById = async (reg, res) => {
+export const getDepartmentById = async (req, res) => {
     try {
         const department = await Department.findAll({
             where: { id: req.params.id },
@@ -31,7 +31,7 @@ export const createDepartment = async (req, res) => {
         res.json({ message: error.message });
     }
 };
-export const updateDepartment = (req, res) => {
+export const updateDepartment = async (req, res) => {
     try {
         await Department.update(req.body, {
             where: {
@@ -39,7 +39,24 @@ export const updateDepartment = (req, res) => {
             },
         });
         res.json({
-            message
+            message: 'Department Updated',
         });
+    } catch (error) {
+        res.json({ message: error.message });
     }
 };
+
+export const deleteDepartment = async (req, res) => {
+    try{
+        await Department.destroy({
+            where: {
+                id: params.id,
+            },
+        });
+        res.json({
+            message: 'Department Deleted',
+        });
+    } catch (error) {
+        res.json({ message: error.message });
+    }
+}
