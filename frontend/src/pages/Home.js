@@ -30,7 +30,7 @@ export default function Home() {
         <>
             <Navbar sticky="top" expand="md" varian="dark" className="justify-content-center px-4"
                 style={{ backgroundColor: '#4b4b46' }}>
-                <Nav >
+                <Nav>
                     <Nav.Link className='text-light' onClick={scrollToTop}>ProjectSchool</Nav.Link>
                     <Nav.Link className='text-light' onClick={carouselClick}>CarouselBox</Nav.Link>
                     <Nav.Link className='text-light' onClick={accordionClick}>AccordionBox</Nav.Link>
