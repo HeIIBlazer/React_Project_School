@@ -33,7 +33,7 @@ export const getProfessionByDepartmentId = async (req, res) => {
         const professions = await Profession.findAll({
             include:'department',
             where: {
-                departmentId: req.params.departmentId
+                department_id: req.params.id,
             },
             order:[['name', 'ASC']]
         });

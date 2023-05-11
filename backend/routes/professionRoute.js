@@ -13,7 +13,7 @@ const professionRouter = express.Router();
 
 professionRouter.get('/', getAllProfessions);
 professionRouter.get('/:id', getProfessionById);
-professionRouter.get('/department/:departmentId', getProfessionByDepartmentId);
+professionRouter.get('/department/:id', getProfessionByDepartmentId);
 
 professionRouter.post('/', createProfession);
 professionRouter.put('/:id', updateProfession);

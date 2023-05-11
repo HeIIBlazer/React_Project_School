@@ -60,3 +60,4 @@ export const deleteDepartment = async (req, res) => {
         res.json({ message: error.message });
     }
 }
+

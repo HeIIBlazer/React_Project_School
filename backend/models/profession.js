@@ -10,12 +10,13 @@ Profession.init(
             autoIncrement: true,
             primaryKey: true,
         },
+        department_id: { type: DataTypes.INTEGER },
         name: { type: DataTypes.STRING },
         duration: { type: DataTypes.INTEGER },
         education: { type: DataTypes.STRING },
         description: { type: DataTypes.STRING },
         poster: { type: DataTypes.STRING },
-        department_id: { type: DataTypes.INTEGER },
+
     },
     {
         sequelize: db,
