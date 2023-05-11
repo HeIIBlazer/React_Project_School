@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-export default function SpecialtyList({ departmentId }) {
+export default function SpecialtyList({ departmentId, searchValue }) {
     const [specialties, setSpecialties] = useState([]);
     useEffect(() => {
         const department_id = departmentId > 0 ? `/department/${departmentId}` : '';
@@ -16,7 +16,15 @@ export default function SpecialtyList({ departmentId }) {
     }, [departmentId],);
     return (
         <>
-            {specialties.map((data) => (
+            {specialties
+            .filter((data) => {
+                if (data.name.toLowerCase().includes(searchValue.toLowerCase())) {
+                    return true;
+                } 
+                    return false;
+                
+            })
+            .map((data) => (
                 <Row key={data.id} className='m-2'>
                     <Col md="3">
                         <img src={data.poster} alt="Logo" className='mr-3 img-thumbnail' />

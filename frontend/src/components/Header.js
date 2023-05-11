@@ -17,7 +17,7 @@ export default function Header() {
                     <NavbarCollapse id='responsive-navbar-nav'>
                         <Nav className='me-auto'>
                             <Nav.Link href='/'>Home</Nav.Link>
-                            <Nav.Link href='/speciality'>Specialties</Nav.Link>
+                            <Nav.Link href='/specialty'>Specialties</Nav.Link>
                         </Nav>
                     </NavbarCollapse>
                 </Container>

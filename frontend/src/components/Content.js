@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from '../pages/Home';
 import Specialties from '../pages/Specialties';
+import DetailSpecialty from '../pages/DetailSpecialty';
 
 export default function Content() {
     return (
@@ -10,7 +11,8 @@ export default function Content() {
                 <Routes>
                     <Route exact path='/' element={<Home />} />
 
-                    <Route path='/speciality' element={<Specialties />} />
+                    <Route path='/specialty' element={<Specialties />} />
+                    <Route path='/detail/:id' element={<DetailSpecialty/>}/>
                 </Routes>
             </Router>
         </main>
