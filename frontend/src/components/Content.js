@@ -4,6 +4,9 @@ import Home from '../pages/Home';
 import Specialties from '../pages/Specialties';
 import DetailSpecialty from '../pages/DetailSpecialty';
 
+import ProfessionList from '../actions/ProfessionList';
+import AddProfession from '../actions/AddProfession';
+
 export default function Content() {
     return (
         <main className='flex-flex-shrink-0'>
@@ -13,6 +16,9 @@ export default function Content() {
 
                     <Route path='/specialty' element={<Specialties />} />
                     <Route path='/detail/:id' element={<DetailSpecialty/>}/>
+
+                    <Route path='/profession' element={<ProfessionList />} />
+                    <Route path='/addprofession' element={<AddProfession />} />
                 </Routes>
             </Router>
         </main>
