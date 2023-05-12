@@ -15,7 +15,7 @@ export default function DetailSpecialty() {
             setDepartment(response.data.department);
         };
         getSpecialty();
-    })
+    }, [id])
     return (
         <>
             <Container className='mt-1'>
