@@ -6,21 +6,23 @@ import DetailSpecialty from '../pages/DetailSpecialty';
 
 import ProfessionList from '../actions/ProfessionList';
 import AddProfession from '../actions/AddProfession';
+import EditProfession from '../actions/EditProfession';
 
 export default function Content() {
-    return (
-        <main className='flex-flex-shrink-0'>
-            <Router>
-                <Routes>
-                    <Route exact path='/' element={<Home />} />
+   return (
+      <main className="flex-flex-shrink-0">
+         <Router>
+            <Routes>
+               <Route exact path="/" element={<Home />} />
 
-                    <Route path='/specialty' element={<Specialties />} />
-                    <Route path='/detail/:id' element={<DetailSpecialty/>}/>
+               <Route path="/specialty" element={<Specialties />} />
+               <Route path="/detail/:id" element={<DetailSpecialty />} />
 
-                    <Route path='/profession' element={<ProfessionList />} />
-                    <Route path='/addprofession' element={<AddProfession />} />
-                </Routes>
-            </Router>
-        </main>
-    )
+               <Route path="/profession" element={<ProfessionList />} />
+               <Route path="/addprofession" element={<AddProfession />} />
+               <Route path="/editprofession/:id" element={<EditProfession />} />
+            </Routes>
+         </Router>
+      </main>
+   );
 }
