@@ -12,6 +12,11 @@ import DepartmentList from '../actions/DepartmentList';
 import AddDepartment from '../actions/AddDepartment';
 import EditDepartment from '../actions/EditDepartment';
 
+import Register from './Register';
+import Login from './Login';
+import Profile from './Profile';
+import Logout from './Logout';
+
 export default function Content() {
    return (
       <main className="flex-flex-shrink-0">
@@ -29,6 +34,11 @@ export default function Content() {
                <Route path="/department" element={<DepartmentList />} />
                <Route path="/adddepartment" element={<AddDepartment />} />
                <Route path="/editdepartment/:id" element={<EditDepartment />} />
+
+               <Route exact path="/register" element={<Register />} />
+               <Route exact path="/login" element={<Login />} />
+               <Route exact path="/profile" element={<Profile />} />
+               <Route exact path="/logout" element={<Logout />} />
             </Routes>
          </Router>
       </main>

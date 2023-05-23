@@ -33,6 +33,12 @@ export default function Header() {
                       <Nav.Link href="/profession">Manage Professions</Nav.Link>
                       <Nav.Link href="/department">Manage Departments</Nav.Link>
                    </Nav>
+                   <Nav>
+                      <Nav.Link href="/login">Login</Nav.Link>
+                      <Nav.Link href="/register">Register</Nav.Link>
+                      <Nav.Link href="/profile">Profile</Nav.Link>
+                      <Nav.Link href="/logout">Logout</Nav.Link>
+                   </Nav>
                 </NavbarCollapse>
              </Container>
           </Navbar>
