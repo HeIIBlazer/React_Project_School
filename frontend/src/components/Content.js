@@ -12,6 +12,8 @@ import DepartmentList from '../actions/DepartmentList';
 import AddDepartment from '../actions/AddDepartment';
 import EditDepartment from '../actions/EditDepartment';
 
+import UsersList from '../actions/UsersList';
+
 import Register from './Register';
 import Login from './Login';
 import Profile from './Profile';
@@ -34,6 +36,8 @@ export default function Content() {
                <Route path="/department" element={<DepartmentList />} />
                <Route path="/adddepartment" element={<AddDepartment />} />
                <Route path="/editdepartment/:id" element={<EditDepartment />} />
+
+               <Route path="/users" element={<UsersList />} />
 
                <Route exact path="/register" element={<Register />} />
                <Route exact path="/login" element={<Login />} />
