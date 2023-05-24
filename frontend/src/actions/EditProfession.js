@@ -52,6 +52,7 @@ export default function EditProfession() {
       });
       navigate('/profession');
    };
+
    return (
       <Container className="mt-1">
          <h2 className="text-center">

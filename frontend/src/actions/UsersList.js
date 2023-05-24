@@ -32,9 +32,7 @@ export default function UsersList() {
                   <tbody>
                      {users.map((users, index) => (
                         <tr key={users.id}>
-                           <td>
-                              {index + 1}. #{users.id}
-                           </td>
+                           <td>#{users.id}</td>
                            <td>{users.name}</td>
                            <td>{users.email}</td>
                            <td>{users.role}</td>

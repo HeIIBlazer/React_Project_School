@@ -4,6 +4,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Table from 'react-bootstrap/Table';
 
+
 export default function DepartmentList() {
    const [department, setDepartment] = React.useState([]);
 
